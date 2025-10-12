@@ -9,24 +9,18 @@
       { "type": "object" }
       ]
   },
-  "phon": {
-      "oneOf": [
+  "phonetic": {
+    "oneOf": [
         { "type": "string" },
-        {
-          "type": "object",
-          "properties": {
-            "phm": {
-              "type": "string"
-            },
-            "pht": {
-              "type": "string"
-            }
-          },
-          "required": ["phm", "pht"],
-          "additionalProperties": false
-        }
-      ]
-    },
+        { "type": "object" }
+    ]
+  },
+  "phonemic": {
+    "oneOf": [
+        { "type": "string" },
+        { "type": "object" }
+    ]
+  },
   "morph_category": { "type": "string" },
   "morph_type": { "type": "string" },
   "part_of_speech": { "type": "string" },
@@ -52,23 +46,23 @@
               { "type": "object" }
               ]
           },
-          "phon": {
+          "phonetic": {
             "oneOf": [
               {
                 "type": "string"
               },
               {
-                "type": "object",
-                "properties": {
-                  "phm": {
-                    "type": "string"
-                  },
-                  "pht": {
-                    "type": "string"
-                  }
-                },
-                "required": ["phm", "pht"],
-                "additionalProperties": false
+                "type": "object"
+              }
+            ]
+          },
+          "phonemic": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
               }
             ]
           },
@@ -172,5 +166,6 @@
   "senses",
   "date_created",
   "date_modified"
-]
+],
+"additionalProperties": false
 }
