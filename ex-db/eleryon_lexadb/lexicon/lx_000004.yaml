@@ -1,6 +1,6 @@
 id: lx_000004
 lexeme: evēsellose
-phon: eveɪsellose
+phonemic: eveɪsellose
 morph_category: lexical
 morph_type: root
 part_of_speech: verb
@@ -11,11 +11,11 @@ allomorphs:
   al_01:
     id: al_01
     morph: vēsel
-    phon: veɪsel
+    phonemic: veɪsel
   al_02:
     id: al_02
     morph: evēsel
-    phon: eveɪsel
+    phonemic: eveɪsel
 senses:
   se_01:
     id: se_01

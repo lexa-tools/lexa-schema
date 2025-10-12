@@ -1,6 +1,6 @@
 id: lx_000002
 lexeme: unullose
-phon: unullose
+phonemic: unullose
 morph_category: lexical
 morph_type: root
 part_of_speech: verb
@@ -14,7 +14,7 @@ allomorphs:
   al_02:
     id: al_02
     morph: unul
-    phon: unul
+    phonemic: unul
 senses:
   se_01:
     id: se_01

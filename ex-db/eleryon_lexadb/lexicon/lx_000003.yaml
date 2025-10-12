@@ -1,6 +1,6 @@
 id: lx_000003
 lexeme: vēselse
-phon: veɪselse
+phonemic: veɪselse
 morph_category: lexical
 morph_type: root
 part_of_speech: verb
@@ -10,7 +10,7 @@ allomorphs:
   al_01:
     id: al_01
     morph: vēsel
-    phon: veɪsel
+    phonemic: veɪsel
 senses:
   se_01:
     id: se_01
