@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lexa schemas",
+    "section": "",
+    "text": "A Lexa database (lexadb) is a directory containing the following files/dirs:\n\nconfig.yaml: the database configuration file.\ngrammar.yaml: the grammar specification file.\nlexicon/: directory containing Lexa lexicon files.\ncollections/: directory containing Lexa sentence collections (lexacl)."
+  },
+  {
+    "objectID": "index.html#general-structure",
+    "href": "index.html#general-structure",
+    "title": "Lexa schemas",
+    "section": "",
+    "text": "A Lexa database (lexadb) is a directory containing the following files/dirs:\n\nconfig.yaml: the database configuration file.\ngrammar.yaml: the grammar specification file.\nlexicon/: directory containing Lexa lexicon files.\ncollections/: directory containing Lexa sentence collections (lexacl)."
+  },
+  {
+    "objectID": "index.html#lexicon-file-schema",
+    "href": "index.html#lexicon-file-schema",
+    "title": "Lexa schemas",
+    "section": "Lexicon file schema",
+    "text": "Lexicon file schema\nid: lx_00000n\nlexeme: &lt;string&gt;\nphonemic: &lt;string&gt;\nphonetic: &lt;string&gt;\nmorph_category: &lt;lexical, grammatical&gt;\nmorph_type: &lt;root, stem, affix, clitic, particle, compound, phrase&gt;\npart_of_speech: &lt;string&gt;\ninflectional_features:\n  &lt;feature_n&gt;: &lt;string&gt;\netymology: &lt;string&gt;\nloan_word: &lt;string&gt;\nhomophone: &lt;numeric&gt;\nallomorphs:\n  al_0n:\n    id: al_0n\n    morph: &lt;string&gt;\n    phonemic: &lt;string&gt;,\n    phonetic: &lt;string&gt;,\n    condition:\n      &lt;condition_type_n&gt;: &lt;string&gt;\nsenses:\n  se_0n:\n    id: se_0n\n    gloss: &lt;string&gt;\n    definition: &lt;string&gt;\n    literal: &lt;string&gt;\n    scientific: &lt;string&gt;\n    usage: &lt;string&gt;\n    inflectional_features:\n      &lt;feature_n&gt;: &lt;string&gt;\n    examples: [\"cl_00000n:st_00000n\"]\n    etymology: &lt;string&gt;\ncrossref: [\"lx_00000n\"]\nvariants: [&lt;string&gt;]\nlists: [&lt;string&gt;]\nsemantics:\n  semantic_domain: [\"sd_00000n\"]\n  synonyms: [\"lx_00000n\"]\n  antonyms: [\"lx_00000n\"]\nnotes: [&lt;string&gt;]\ndate_created: &lt;date&gt;\ndate_modified: &lt;date&gt;"
+  },
+  {
+    "objectID": "index.html#text-schema",
+    "href": "index.html#text-schema",
+    "title": "Lexa schemas",
+    "section": "Text schema",
+    "text": "Text schema\nTexts are located in the collections/ folder. Each text is saved in a separate .yaml file.\nid: cl_00000n\ntitle: &lt;string&gt;\ntopic: &lt;string&gt;\ngenre: &lt;string&gt;\nparticipants: [&lt;string&gt;]\ntranslators: [&lt;string&gt;]\nsource: &lt;string&gt;\nsentences:\n  st_00000n:\n    sentence: {&lt;string&gt;,\n        lang: &lt;string&gt;\n        transcription: &lt;string&gt;\n        transliteration: &lt;string&gt;}\n    phonemic: &lt;string&gt;\n    phonetic: &lt;string&gt;\n    morphophonemic: &lt;string&gt;\n    morpho: &lt;string&gt;\n    gloss: &lt;string&gt;\n    translation: &lt;string&gt;\n    literal: &lt;string&gt;\n    notes: [&lt;string&gt;]\nnotes: [&lt;string&gt;]"
+  }
+]
