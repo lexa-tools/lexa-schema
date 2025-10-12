@@ -1,0 +1,34 @@
+id: lx_000001
+lexeme:
+  hira: ろっしゃ
+  translit: rossha
+phon:
+  phm: roʃʃa
+  pht: ɽɔʃʃa
+morph_category: lexical
+morph_type: root
+part_of_speech: noun
+allomorphs:
+  al_01:
+    id: al_01
+    morph:
+      hira: ろっしゃ
+      translit: rossha
+    phon: ɽɔʃʃa
+senses:
+  se_01:
+    id: se_01
+    gloss:
+      eng: lunch
+      jpn: 昼飯
+    definition:
+      bro:
+        hira: "うって「おん「ふおい「さんの"
+        translit: "utte on foi sanno"
+      eng: "lunch, midday meal"
+      jpn: "昼食、昼間に食べる食事"
+    examples:
+    - cl_000001:st_000001
+    - cl_000001:st_000002
+date_created: 2022-07-24 14:31:47
+date_modified: 2022-07-24 14:31:47
