@@ -13,10 +13,10 @@
   "license": "MIT",
   "author": "Stefano Coretta",
   "type": "commonjs",
-  "dependencies": {
-    "@sourcemeta/jsonschema": "^11.10.0"
-  },
   "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "glob": "^11.0.3",
     "yaml": "^2.8.1"
   }
 }
