@@ -15,5 +15,8 @@
   "type": "commonjs",
   "dependencies": {
     "@sourcemeta/jsonschema": "^11.10.0"
+  },
+  "devDependencies": {
+    "yaml": "^2.8.1"
   }
 }
