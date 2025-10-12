@@ -1,0 +1,19 @@
+{
+  "name": "lexa-schema",
+  "version": "0.0.3",
+  "description": "",
+  "homepage": "https://github.com/lexa-tools/lexa-schema#readme",
+  "bugs": {
+    "url": "https://github.com/lexa-tools/lexa-schema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexa-tools/lexa-schema.git"
+  },
+  "license": "MIT",
+  "author": "Stefano Coretta",
+  "type": "commonjs",
+  "dependencies": {
+    "@sourcemeta/jsonschema": "^11.10.0"
+  }
+}
