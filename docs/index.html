@@ -150,6 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#general-structure" id="toc-general-structure" class="nav-link active" data-scroll-target="#general-structure">General structure</a></li>
   <li><a href="#lexicon-file-schema" id="toc-lexicon-file-schema" class="nav-link" data-scroll-target="#lexicon-file-schema">Lexicon file schema</a></li>
   <li><a href="#text-schema" id="toc-text-schema" class="nav-link" data-scroll-target="#text-schema">Text schema</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
   </ul>
 </nav>
     </div>
@@ -255,6 +256,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">literal</span><span class="kw">:</span><span class="at"> &lt;string&gt;</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">notes</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">&lt;string&gt;</span><span class="kw">]</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">notes</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">&lt;string&gt;</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="validation" class="level2">
+<h2 class="anchored" data-anchor-id="validation">Validation</h2>
+<p>To validate:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> scripts/validate.js json/lx-schema.json <span class="st">"ex-db/bromi_lexadb/lexicon/*.yaml"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>

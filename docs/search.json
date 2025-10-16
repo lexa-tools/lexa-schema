@@ -26,5 +26,12 @@
     "title": "Lexa schemas",
     "section": "Text schema",
     "text": "Text schema\nTexts are located in the collections/ folder. Each text is saved in a separate .yaml file.\nid: cl_00000n\ntitle: &lt;string&gt;\ntopic: &lt;string&gt;\ngenre: &lt;string&gt;\nparticipants: [&lt;string&gt;]\ntranslators: [&lt;string&gt;]\nsource: &lt;string&gt;\nsentences:\n  st_00000n:\n    sentence: {&lt;string&gt;,\n        lang: &lt;string&gt;\n        transcription: &lt;string&gt;\n        transliteration: &lt;string&gt;}\n    phonemic: &lt;string&gt;\n    phonetic: &lt;string&gt;\n    morphophonemic: &lt;string&gt;\n    morpho: &lt;string&gt;\n    gloss: &lt;string&gt;\n    translation: &lt;string&gt;\n    literal: &lt;string&gt;\n    notes: [&lt;string&gt;]\nnotes: [&lt;string&gt;]"
+  },
+  {
+    "objectID": "index.html#validation",
+    "href": "index.html#validation",
+    "title": "Lexa schemas",
+    "section": "Validation",
+    "text": "Validation\nTo validate:\nnode scripts/validate.js json/lx-schema.json \"ex-db/bromi_lexadb/lexicon/*.yaml\""
   }
 ]

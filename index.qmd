@@ -88,3 +88,10 @@ sentences:
 notes: [<string>]
 ```
 
+## Validation
+
+To validate:
+
+```bash
+node scripts/validate.js json/lx-schema.json "ex-db/bromi_lexadb/lexicon/*.yaml"
+```
