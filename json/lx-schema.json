@@ -11,7 +11,7 @@
                     "type": "string"
                 },
                 {
-                    "type": "object"
+                    "$ref": "./lx-writing-schema.json#"
                 }
             ]
         },
@@ -74,7 +74,7 @@
                                     "type": "string"
                                 },
                                 {
-                                    "type": "object"
+                                    "$ref": "./lx-writing-schema.json#"
                                 }
                             ]
                         },

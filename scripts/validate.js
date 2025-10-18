@@ -1,4 +1,4 @@
-// validate.js
+// scripts/validate.js
 const fs = require('fs');
 const path = require('path');
 const yaml = require('yaml');
@@ -14,14 +14,6 @@ if (!schemaPath || !dataPattern) {
     process.exit(1);
 }
 
-// Load JSON schema
-const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
-
-// Initialize AJV
-const ajv = new Ajv({ allErrors: true, strict: false });
-addFormats(ajv);
-const validate = ajv.compile(schema);
-
 // Find all files matching glob
 const files = glob.sync(dataPattern);
 
@@ -30,25 +22,48 @@ if (files.length === 0) {
     process.exit(1);
 }
 
-// Track validation failures for exit code
+// Track validation failures
 let hasError = false;
 
-// Validate each file
-files.forEach(file => {
-    const ext = path.extname(file).toLowerCase();
-    if (ext !== '.yaml' && ext !== '.yml') return;
-
-    const data = yaml.parse(fs.readFileSync(file, 'utf8'));
-    const valid = validate(data);
-
-    if (valid) {
-        console.log(`${file}: valid`);
-    } else {
-        console.log(`${file}: invalid`);
-        console.log(validate.errors);
-        hasError = true;
+// Initialize AJV with loadSchema for resolving $refs
+const ajv = new Ajv({ allErrors: true, strict: false, loadSchema: async (uri) => {
+    // Resolve the $ref relative to the folder containing the main schema
+    const refPath = path.resolve(path.dirname(schemaPath), uri);
+    if (!fs.existsSync(refPath)) {
+        throw new Error(`Referenced schema not found: ${refPath}`);
     }
-});
+    const data = fs.readFileSync(refPath, 'utf8');
+    return JSON.parse(data);
+}});
 
-// Exit with nonzero code if any validation failed
-process.exit(hasError ? 1 : 0);
+addFormats(ajv);
+
+(async () => {
+    try {
+        // Load the main schema
+        const mainSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
+        const validate = await ajv.compileAsync(mainSchema);
+
+        // Validate each YAML file
+        for (const file of files) {
+            const ext = path.extname(file).toLowerCase();
+            if (ext !== '.yaml' && ext !== '.yml') continue;
+
+            const data = yaml.parse(fs.readFileSync(file, 'utf8'));
+            const valid = validate(data);
+
+            if (valid) {
+                console.log(`${file}: valid`);
+            } else {
+                console.log(`${file}: invalid`);
+                console.log(validate.errors);
+                hasError = true;
+            }
+        }
+
+        process.exit(hasError ? 1 : 0);
+    } catch (err) {
+        console.error('Validation error:', err);
+        process.exit(1);
+    }
+})();

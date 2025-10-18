@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "oneOf": [
+            {
+                "type": "string"
+            },
+            {
+            "type": "array",
+            "minItems": 2,
+            "items": [
+                { "type": "string" } 
+            ],
+            "contains": {
+                "type": "object",
+                "properties": {
+                "transliteration": { "type": "string" },
+                "transcription": { "type": "string" }
+                },
+                "minProperties": 1,
+                "additionalProperties": false
+            }
+            }
+        ]
+    }
+}
